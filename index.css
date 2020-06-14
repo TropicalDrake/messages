@@ -1,0 +1,47 @@
+body {
+  max-width: 500px;
+  margin: 50px auto; }
+
+#app__head {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background: #f9f9f9; }
+
+#app__list {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 15px; }
+  #app__list > li:not(:last-of-type) {
+    margin-bottom: 5px; }
+  #app__list > li.completed {
+    background-color: #86ffa1 !important; }
+  #app__list > li {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f9f9f9; }
+    #app__list > li > div {
+      flex-grow: 1;
+      overflow: hidden; }
+    #app__list > li > a:first-of-type {
+      margin-left: 20px; }
+    #app__list > li > a:last-of-type {
+      margin-left: 10px; }
+
+#app__form {
+  display: flex; }
+  #app__form > input:first-of-type {
+    flex-grow: 1;
+    font-size: inherit;
+    padding: 0;
+    border: solid 2px #f9f9f9;
+    background: white;
+    padding: 10px 15px; }
+  #app__form > button {
+    min-width: 50px;
+    font-size: inherit;
+    padding: 0;
+    border: 0;
+    background: #f9f9f9;
+    cursor: pointer; }

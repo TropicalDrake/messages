@@ -17,41 +17,103 @@ body {
   .messages__list > li.message--date:not(:first-of-type) {
     margin: 30px 0 !important; }
 
-.message--left {
+.message--right {
   display: flex;
   justify-content: left; }
-  .message--left > input:focus ~ label {
-    background: #d4deff; }
-  .message--left > input:focus ~ div {
+  .message--right:hover > div:nth-of-type(2) {
+    background: #7affb5; }
+  .message--right:hover > div:nth-of-type(1) {
     visibility: visible;
     animation-name: fade-in;
     animation-duration: 0.5s; }
-  .message--left > label {
-    transition: background 0.5s;
+  .message--right > div:nth-of-type(2) {
+    transition: background-color 0.5s;
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: anywhere;
+    background: #acffd1;
+    margin-left: 10px; }
+  .message--right > div:nth-of-type(1) {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    justify-content: left;
+    align-items: center;
+    visibility: hidden; }
+    .message--right > div:nth-of-type(1) > *:not(:first-child) {
+      margin-left: 10px; }
+    .message--right > div:nth-of-type(1) > label {
+      cursor: pointer; }
+    .message--right > div:nth-of-type(1) > span {
+      flex-grow: 1;
+      text-align: right; }
+    .message--right > div:nth-of-type(1) > input:checked ~ div {
+      background-color: red; }
+
+.message--left {
+  display: flex;
+  justify-content: left; }
+  .message--left:hover > div:nth-of-type(1) {
+    background: #d4deff; }
+  .message--left:hover > div:nth-of-type(2) {
+    visibility: visible;
+    animation-name: fade-in;
+    animation-duration: 0.5s; }
+  .message--left > div:nth-of-type(1) {
+    transition: background-color 0.5s;
     padding: 10px;
     border-radius: 10px;
     word-wrap: anywhere;
     background: #eaefff;
     margin-right: 10px; }
-  .message--left > div {
+  .message--left > div:nth-of-type(2) {
     display: flex;
+    position: relative;
     flex-grow: 1;
     justify-content: left;
     align-items: center;
     visibility: hidden; }
+    .message--left > div:nth-of-type(2) > *:not(:last-child) {
+      margin-right: 10px; }
+    .message--left > div:nth-of-type(2) > span {
+      flex-grow: 1; }
+    .message--left > div:nth-of-type(2) > label {
+      cursor: pointer; }
+    .message--left > div:nth-of-type(2) > input:checked ~ .infobox {
+      display: block; }
   .message--left > img {
     height: 25px;
     margin-right: 15px;
     border-radius: 50%; }
 
-.message--right {
-  display: flex;
-  justify-content: right; }
-  .message--right > div {
-    padding: 10px;
-    border-radius: 10px;
-    word-wrap: anywhere;
-    background: #acffd1; }
+.infobox {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: white;
+  border: solid 1px whitesmoke;
+  box-shadow: 0 0 5px #e2e2e2;
+  z-index: 1000;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center; }
+  .infobox > div > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 15px; }
+  .infobox > div > a:hover {
+    text-decoration: none;
+    color: inherit;
+    background: whitesmoke; }
+
+.infobox--right {
+  right: 0; }
+
+.infobox--left {
+  left: 0; }
 
 .message--date {
   display: flex;

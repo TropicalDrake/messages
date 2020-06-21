@@ -43,23 +43,54 @@
 
             </li>
             
-            <li class="message--left">
-                <input type="text" id="test1" class="input--hidden">
+            <li class="message message--left">
                 <img src="https://www.aalforum.eu/wp-content/uploads/2016/04/profile-placeholder.png">
-                <label for="test1">Hej</label>
-                <div><span class="text--xsmall">21:21</span></div>
-            </li>
-
-            <li class="message--right">
                 <div>Hej</div>
+                <div>
+                    <span class="text--xsmall">21:21</span>
+                    <label for="test"><img src="img/more2.svg"></label>
+                    <input type="checkbox" id="test" hidden>
+
+                    <div class="infobox infobox--right">
+
+                        <div>
+
+                            <a href="#">Odpowiedz</a>
+                            <a href="#">Zgłoś</a>
+                            <a href="#">Usuń</a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
             </li>
 
-            <li class="message--left">
-                <input type="text" id="test2" class="input--hidden">
+            <li class="message message--left">
                 <img src="https://www.aalforum.eu/wp-content/uploads/2016/04/profile-placeholder.png">
-                <label for="test2">Hej</label>
-                <div><span class="text--xsmall">21:21</span></div>
+                <div>Hej</div>
+                <div>
+                    <span class="text--xsmall">21:21</span>
+                    <label for="test2"><img src="img/more2.svg"></label>
+                    <input type="checkbox" id="test2" hidden>
+
+                    <div class="infobox infobox--right">
+
+                        <div>
+
+                            <a href="#">abba</a>
+                            <a href="#">abba</a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
             </li>
+
+
 
             <li class="message--date">
 
@@ -69,13 +100,21 @@
 
             </li>
 
-            <li class="message--left">
+            <li class="message message--left">
                 <img src="https://www.aalforum.eu/wp-content/uploads/2016/04/profile-placeholder.png">
-                <div>Jesteś?</div>
+                <div>Hej</div>
+                <div>
+                    <span class="text--xsmall">21:21</span>
+                    <label for="test"><img src="img/more2.svg"></label>
+                </div>
             </li>
 
-            <li class="message--right">
-                <div>Taak</div>
+            <li class="message message--right">
+                <div>
+                    <label for="test"><img src="img/more2.svg"></label>
+                    <span class="text--xsmall">21:21</span>
+                </div>
+                <div>Hej</div>
             </li>
 
 
@@ -94,6 +133,38 @@
         </form>
 
     </div>
+
+
+    <script>
+
+    var messages = document.getElementsByClassName("message");
+
+    for(let a = 0; a < messages.length; a++){
+
+
+        messages[a].addEventListener("mouseleave",onHoverOver);
+
+
+    }
+
+    function onHoverOver(e){
+
+        // Uncheck checkbox to hide infobox
+
+        var infobox = e.target.querySelector("input[type=checkbox]");
+
+        if(infobox){
+
+            infobox.checked = false;
+
+
+        }
+
+
+    }
+
+    </script>
+
 
     
 </body>
